@@ -53,6 +53,8 @@ class ApplicationController < Sinatra::Base
   end
   
   get '/tweets' do
+    
+    byebug
     @tweets = Tweet.all
     @user = current_user(session)
     if logged_in?(session)
